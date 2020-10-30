@@ -11,10 +11,10 @@ def main():
     Executes each funtion in the script
     """
     results_file = open("results.txt", "w")
-    print(len(create_ip_list("192.168.1.", 3)))
-    ping_list(results_file, "192.168.1.", 3)
+    print(len(create_ip_list("192.167.1.", 41)))
+    ping_list(results_file, "192.167.1.", 41)
     results_file.close()
-
+#    print (response)
 
 def create_ip_list(subnet, num):
     """Appends the concatenated ip to the ip_list"""
@@ -28,8 +28,9 @@ def ping_list(results_file, subnet, num):
     """Outputs ping ip_list reults up or down"""
     ip_addresses = create_ip_list(subnet, num)
     for ip in ip_addresses:
-        response = os.popen(f"ping {ip} -n 1").read()
-        if "Received = 1" and "Approximate" in response:
+        response = os.popen(f"ping -c 1 {ip} ").read()
+#	print (response)
+        if "0% packet loss"  in response:
             print(f"UP {ip} Ping Successful")
             results_file.write(f"UP {ip} Ping Successful" + "\n")
         else:

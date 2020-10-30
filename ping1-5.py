@@ -14,23 +14,24 @@ with open('destination-ip') as file:
        des = des.splitlines()
 #       print (des)
 
-for x in range (1):
-#	print('********************************************************************** loop Num = ' + x)
-#	print('********************************************************************** Loop Num = ' + x)
+for x in range (2):
+#	print('********************************************************************** loop Num = ' , x)
+#	print('********************************************************************** Loop Num = ' , x)
 	for ip in source :
 		print('                                                                                  ')
 		print('********************************* new source  *************************************')
-		print('                              ' + ip)
+		print('                              '+ ip +" Loop num:",x+1 )
 		print('********************************* new source  *************************************')
 		print('                                                                                  ')
 
 		results_file.write(f"********************************* *********************************** " + "\n")
-		results_file.write(f"            source from  {ip}                         " + "\n")
+		results_file.write(f"            source from  {ip}  loop Num: {x}                       " + "\n")
 		results_file.write(f"********************************* *********************************** " + "\n")
 
 		for ipd in des :
 			response = os.popen(f"ping -c 1 -I {ip} {ipd}").read()
-			if "1 received" in response:
+#			print (response)
+			if "0% packet loss" in response:
 				print(f"UP  Ping from {ip} to {ipd} Successful")
 				results_file.write(f"UP  Ping from {ip} to {ipd} Successful" + "\n")
 			else:

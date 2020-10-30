@@ -17,7 +17,7 @@ UP 192.167.1.16 Ping Successful
 UP 192.167.1.17 Ping Successful
 UP 192.167.1.18 Ping Successful
 UP 192.167.1.19 Ping Successful
-Down 192.167.1.20 Ping Unsuccessful
+UP 192.167.1.20 Ping Successful
 UP 192.167.1.21 Ping Successful
 UP 192.167.1.22 Ping Successful
 UP 192.167.1.23 Ping Successful
@@ -37,4 +37,4 @@ UP 192.167.1.36 Ping Successful
 UP 192.167.1.37 Ping Successful
 UP 192.167.1.38 Ping Successful
 UP 192.167.1.39 Ping Successful
-Down 192.167.1.40 Ping Unsuccessful
+UP 192.167.1.40 Ping Successful

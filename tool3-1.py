@@ -12,6 +12,8 @@ def main():
     """
     results_file = open("results.txt", "w")
     print(len(create_ip_list("192.167.1.", 41)))
+    print (create_ip_list("192.167.1.", 41))
+#    print (create_ip_list("                 " + "\n")
     ping_list(results_file, "192.167.1.", 41)
     results_file.close()
 #    print (response)

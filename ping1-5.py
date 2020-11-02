@@ -31,7 +31,7 @@ for x in range (2):
 		for ipd in des :
 			response = os.popen(f"ping -c 1 -I {ip} {ipd}").read()
 #			print (response)
-			if "0% packet loss" in response:
+			if " 1 received" in response:
 				print(f"UP  Ping from {ip} to {ipd} Successful")
 				results_file.write(f"UP  Ping from {ip} to {ipd} Successful" + "\n")
 			else:
